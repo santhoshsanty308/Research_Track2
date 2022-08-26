@@ -9,10 +9,6 @@ At initial the package is cloned from the repository
 
    https://github.com/CarmineD8/rt2_assignment1.git
 
-   and the requirment is to control a robot in the vrep scene with the ROS is developed and updated in this repository sub branch action
-
-   https://github.com/yeshwanthguru/Research_Track2.git
-
 You can execute the process with the command:
 
                    roslaunch rt2_assignment1 sim.launch
