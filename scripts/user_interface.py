@@ -1,16 +1,15 @@
-## @package rt2_assignment1
-#	\file user_interface.py
-#	\brief This file contain the user interface service server
-#	\author Santhosh sadhanandham
-#	\date 26/08/2022
-#	
-#	\details
-#
-#	\Client : <BR>
-#		\user_interface
-#
-#	This node define the command line user interface for the control of the robot
+"""
+.. module:: user_interface
+   :platform: Unix
+   :synopsis: Python module for the user Interface
+.. moduleauthor:: Santhosh sadhanandham
 
+This node implements an user interface
+
+Service:
+ /user_interface
+ 
+"""
 
 import rospy
 import time
@@ -19,15 +18,16 @@ from rt2_assignment1.srv import Command
 
 
 def main():
-##   
-#    Definition of the command line
-#    user interface to set the "start"
-#    "stop" varaible by relying on the rospy module.
-#
-#    The service is passed to the service "user_interface", 
-#	advertised by the "module go_to_poit"
-#    .
-   
+    """
+    This function initializes the ROS node and waits for the
+    user to
+    insert *start* or *stop* to control the robot, by relying
+    on the
+    `rospy <http://wiki.ros.org/rospy/>`_ module.
+    The user message is passed to the service
+    ``user_interface``,
+    advertised by :mod:`go_to_point`.
+    """
     rospy.init_node('user_interface')
     ui_client = rospy.ServiceProxy('/user_interface', Command)
     time.sleep(10)

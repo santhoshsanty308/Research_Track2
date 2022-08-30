@@ -1,7 +1,7 @@
 /**
 * \file state_machine.cpp
 * \brief This file implement a state machine that start and stops a go to point goal
-* \author Santhosh Sadhanandham
+* \author Santhosh sadhanandham
 * \version 0.1
 * \date 26/08/2022
 *
